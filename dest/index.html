@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>engApp</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container" id="container">
+		<form action="" class="intro hidden" id="intro" onsubmit="return false;">
+			<div class="type">
+				<h3>Type of learning:</h3>
+				<label>en - ru<input type="radio" name="type" value="enru" id="enru" checked></label>
+				<label>ru - en<input type="radio" name="type" value="ruen" id="ruen"></label>
+			</div>
+				
+			<div class="range">
+				<h3>Range: </h3>
+				<label>from: <input type="text" id="begin" size="1" placeholder="1"></label>
+				<label>to: <input type="text" id="end" size="1" placeholder="2500"></label>
+			</div>
+				
+			<div class="order">
+				<h3>Order:</h3>
+				<label>standard <input type="radio" name="order" value="standard" id="standard" checked ></label>
+				<label>random <input type="radio" name="order" value="random" id="random"></label>
+			</div>
+			<input type="submit" value="start" class="start" id="start">
+		</form> <!-- end intro -->
+
+		<div class="learning hidden" id="learning">
+			<div class="header clear" id="header">
+				<div class="info" id="info"></div>
+				<div class="new-game" id="newGame">New game</div>
+			</div>
+			<div class="field" id="field">
+				<div class="question" id="question"></div>
+				<div class="answer" id="answer"></div>
+			</div>
+			<div class="know" id="know">show answer</div>
+			<div class="next" id="next">next word</div>
+		</div> <!-- end learning -->
+	</div> <!-- end container -->
+	
+	<!-- <script src="dict.js"></script> -->
+	<script src="build.js"></script>
+</body>
+</html>

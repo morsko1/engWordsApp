@@ -1,0 +1,23 @@
+{
+  "name": "engWordsApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "morsko1",
+  "license": "MIT",
+  
+  "devDependencies": {
+    "browserify": "*",
+    "babelify": "*",
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-open": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-sass": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*"
+  }
+}
