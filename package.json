@@ -19,5 +19,8 @@
     "gulp-sass": "*",
     "vinyl-buffer": "*",
     "vinyl-source-stream": "*"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0"
   }
 }

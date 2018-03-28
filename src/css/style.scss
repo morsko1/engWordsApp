@@ -7,188 +7,198 @@ $color1: #ddd; // body
 $color2: #D8BFD8; // container
 $color3: #C1A8C1; // кнопки и вопрос
 $color-font: #484c55; // шрифт
-*{
-	box-sizing: border-box;
+
+* {
+    box-sizing: border-box;
 }
-body{
-	background-color: $color1;
-	font-family: Arial;
+body {
+    background-color: $color1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 .clear:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
-.hidden{
-	display: none;
+.hidden {
+    display: none;
 }
-h3{
-	font-weight: bold;
-	margin-bottom: 0.7em;
-	font-size: 1em;
+h3 {
+    font-weight: bold;
+    margin-bottom: .7em;
+    font-size: 1em;
 }
-.container{
-	font-size: 1.3em;
-	width: 100%;
-	max-width: 600px;
-	margin:0 auto;
-	line-height: 1.2;
-	background-color: $color2;
-	padding: 2em;
-	padding-top: 1em;
-	text-align: center;
+.container {
+    font-size: 1.3em;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.2;
+    background-color: $color2;
+    padding: 2em;
+    padding-top: 1em;
+    text-align: center;
 }
-.form-settings{
-	display: inline-block;
+.form-settings {
+    display: inline-block;
 }
-table{
-	margin: 0 auto;
-	td{
-		padding: 0.5em;
-		border: 1px solid black;
-	}
+table {
+    margin: 0 auto;
+    td {
+        padding: .5em;
+        border: 1px solid black;
+    }
 }
 
 /*=================settings==================*/
-label{
-	padding: 0 0.5em;
+label {
+    padding: 0 .5em;
 }
-input{
-	font-size: inherit;
+input {
+    font-size: inherit;
 }
-div{
-	border-radius: 5px;
+div {
+    border-radius: 5px;
 }
 .type,
 .range,
-.order{
-	margin: 1.8em auto;
+.order {
+    margin: 1.8em auto;
 }
-.type{
-	margin-top: 0;
+.type {
+    margin-top: 0;
 }
-input{
-	background-color: $color3;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-	padding: 0.1em ;
+input {
+    background-color: $color3;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.1em ;
 }
-.start{
-	cursor: pointer;
-	padding: 0.5em 1.5em;
-	font-size: 120%;
-	font-weight: bold;
-	border-radius: 5px;
+.start {
+    cursor: pointer;
+    padding: .5em 1.5em;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 5px;
 }
-.range input::-webkit-input-placeholder{
-	color: #777;
+.range input::-webkit-input-placeholder {
+    color: #777;
 }
 
 /*=================learning==================*/
-.field{
-	min-height: 12em;
+.field {
+    min-height: 12em;
 }
 .question,
-.answer{
-	text-align: center;
-	padding: 0.5em 1em;
+.answer {
+    text-align: center;
+    padding: .5em 1em;
 }
-.question{
-	background-color: $color3;
-	position: relative;
-	span{
-		position: absolute;
-		top: 5px;
-		right: 5px;
-	}
+.question {
+    background-color: $color3;
+    position: relative;
+    span {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
 }
-.answer{
-	// text-align: left;
-	background-color: $color2;
-	// min-height: 10em;
+.answer {
+    background-color: $color2;
 }
-// .check{
-// 	text-align: center;
-// 	width: 100%;
-// }
-// .check-outer{
-// 	height: 3em;
-// }
-// .check input[type=text]{
-// 	width: 65%;
-// 	padding: 0.5em 0.5em;
-// }
-// .check input[type=submit]{
-// 	width: 30%;
-// 	padding: 0.5em 1.5em;
-// 	cursor: pointer;
-// }
-.buttons{
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+.buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
-.know, .next{
-	margin:1em auto;
-	padding: 0.5em 0.5em;
-	text-align: center;
-	width: 100%;
-	text-align: center;
-	background-color: $color3;
-	cursor: pointer;
-	user-select: none;
+.know,
+.next {
+    margin:1em auto;
+    padding: .5em .5em;
+    text-align: center;
+    width: 100%;
+    background-color: $color3;
+    cursor: pointer;
+    user-select: none;
 }
-.new-game{
-	display: inline-block;
-	float: right;
-	cursor: pointer;
-	margin-bottom: 2em;
-	background-color: $color3;
-	padding: 0.5em 0.5em;
-	font-size: 80%;
-	line-height: 1.5;
+.new-game {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 2em;
+    background-color: $color3;
+    padding: .5em .5em;
+    font-size: 80%;
+    line-height: 1.5;
 }
-.info{
-	font-size: 80%;
-	float: left;
+.info {
+    font-size: 80%;
+    float: left;
 }
-@media screen and (max-width:480px){/* ///////////MEDIA///////////// */
-body{
-	background-color: $color2;
+
+
+/* ////////////////////////////////////////// */
+/* ////////////////////@MEDIA//////////////// */
+/* ////////////////////////////////////////// */
+@media screen and (max-width:480px){
+body {
+    background-color: $color2;
 }
-.container{
-	width: auto;
-	margin:0;
-	padding: 0.5em;
+html,
+body {
+    margin: 0;
+    padding:0;
+}
+.container {
+    width: auto;
+    margin:0;
+    padding: .5em;
+    height: 100vh;
 }
 /*=================settings==================*/
 .type,
 .range,
-.order{
-	margin: 1em auto;
+.order {
+    margin: 1em auto;
 }
 /*=================learning==================*/
 
+.learning {
+  height: 96vh;
+  position: relative;
+}
 .check input[type=text]{
-	width: 65%;
-	padding: 0.5em 0.5em;
-	font-size: 80%;
-
+    width: 65%;
+    padding: .5em .5em;
+    font-size: 80%;
 }
 .check input[type=submit]{
-	width: 30%;
-	padding: 0.5em 0.5em;
-	font-size: 80%;
+    width: 30%;
+    padding: 0.5em 0.5em;
+    font-size: 80%;
 }
 .new-game{
-	padding: 0.5em 0.5em;
-	font-size: 70%;
-	margin-bottom: 1em;
+    padding: .5em .5em;
+    font-size: 70%;
+    margin-bottom: 1em;
 }
 .info{
-	font-size: 80%;
-	float: left;
+    font-size: 80%;
+    float: left;
+}
+.know,
+.next {
+    padding: 2em .5em;
+    position: absolute;
+    bottom: 2em;
+    border-radius: 10px;
+}
+.field{
+    min-height: 0;
+}
+.answer {
+    padding: 1.5em 1em;
 }
 
-}
+}//end @media
