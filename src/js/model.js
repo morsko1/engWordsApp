@@ -13,11 +13,11 @@ module.exports = (function () {
 				return;
 			}
 			params = {
-				isEnRu: (enru.checked === true)? true: false,
-				begin: parseInt(begin.value)||1,
-				end: parseInt(end.value)||dict.length,
-				current: parseInt(begin.value)||1,
-				standard: (standard.checked === true)? true: false,
+				isEnRu: enru.checked === true,
+				begin: parseInt(begin.value) || 1,
+				end: parseInt(end.value) || dict.length,
+				current: parseInt(begin.value) || 1,
+				standard: standard.checked === true,
 			};
 		},
 		getParams = function () {
@@ -27,15 +27,12 @@ module.exports = (function () {
 			params.current++;
 		},
 		makeQ = function (params) {
-			function randomInteger(min, max) {
-				var rand = min - 0.5 + Math.random() * (max - min + 1)
-				rand = Math.round(rand);
-				return rand;
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
 			}
 			if (!params.standard) { // если порядок случайный
-				params.num = randomInteger(params.begin, params.end) - 1;
-			}
-			else{
+				params.num = getRandomInt(params.begin, params.end) - 1;
+			} else {
 				params.num = params.current-1;
 			}
 			var data = {},
@@ -48,7 +45,7 @@ module.exports = (function () {
 			data.sound = sound;
 			data.parts = parts;
 			data.irr = irr;
-			data.info =  `${params.begin} - ${params.end} <br> ${params.num + 1}`;
+			data.info = `${params.begin} - ${params.end} <br> ${params.num + 1}`;
 			if (params.isEnRu) {
 				data.question = `${en} <br> ${sound} <span id="qparts"> ${parts} </span>`;
 				data.answer = '<table>';
@@ -56,15 +53,13 @@ module.exports = (function () {
 					// если слово - неправильный глагол
 					if (name === 'v-' && 'irregular' in dict[params.num]) {
 						irr = dict[params.num].irregular + '<br>';
-					}
-					else {
+					} else {
 						irr = '';
 					}
 					data.answer += '<tr><td>' + irr + ru[name] + '</td><td>' + name + '</td></tr>';
 				}
 				data.answer += '</table>';
-			} // isEnRu end
-			else {
+			} else {
 				data.question = '<table>';
 				for (name in ru) {
 					data.question += '<tr><td>' + ru[name] + '</td><td>' + name + '</td></tr>';
@@ -74,8 +69,7 @@ module.exports = (function () {
 				if ('irregular' in dict[params.current-1]) {
 					irr = 'irregular:<br>' + dict[params.current-1].irregular;
 					data.answer = `${en} <br> ${sound} <br> ${irr}`;
-				}
-				else {
+				} else {
 					data.answer = `${en} <br> ${sound}`;
 				}
 			}
